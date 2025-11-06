@@ -1,7 +1,34 @@
 # Design and Implementation of Android-based SLAM Intelligent Guide System for the Visually Impaired
 
 An intelligent indoor navigation system that integrates advanced visual SLAM technology with multimodal human-computer interaction to provide safe and accurate guidance for visually impaired users on standard Android smartphones.
+# Design and Implementation of Android-based SLAM Intelligent Guide System for the Visually Impaired
 
+An intelligent indoor navigation system that integrates advanced visual SLAM technology with multimodal human-computer interaction to provide safe and accurate guidance for visually impaired users on standard Android smartphones.
+
+## 📹 System Demonstration
+
+<div align="center">
+
+### Watch Our System in Action
+
+[![Demo Video](https://img.shields.io/badge/▶️_Watch_Demo_Video-16.51MB-red?style=for-the-badge&logo=video)](https://github.com/scq2020/Android-Guide-for-Blind/releases/download/v1.0-demo/demo-video.mp4)
+
+**[📥 Download Full Video (16.51 MB)](https://github.com/scq2020/Android-Guide-for-Blind/releases/download/v1.0-demo/demo-video.mp4)**
+
+### Video Highlights (2 minutes)
+
+| Feature | Description |
+|---------|-------------|
+| 🗺️ **SLAM Mapping** | Real-time indoor environment reconstruction |
+| 🛣️ **Path Planning** | Intelligent A* algorithm with optimization |
+| 🚧 **Obstacle Detection** | Head-level and ground obstacle avoidance |
+| 🔊 **Voice Guidance** | Context-aware navigation instructions |
+| 📳 **Tactile Feedback** | Directional vibration alerts |
+| 🎯 **Complete Workflow** | End-to-end navigation demonstration |
+
+</div>
+
+---
 ## Overview
 
 This project presents a complete mobile-based SLAM navigation solution designed specifically for visually impaired users. The system operates entirely on Android devices without requiring external servers, cloud services, or specialized infrastructure. By deeply integrating visual SLAM technology, intelligent path planning algorithms, and multimodal human-computer interaction, this system addresses critical challenges in assistive navigation technology.

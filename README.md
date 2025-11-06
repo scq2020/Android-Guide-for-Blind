@@ -8,7 +8,7 @@ An intelligent indoor navigation system that integrates advanced visual SLAM tec
 
 ### Watch Our System in Action
 
-https://github.com/scq2020/Android-Guide-for-Blind/assets/YOUR_USER_ID/VIDEO_ID.mp4
+
 
 **[📥 Download Full Video (16.51 MB)](https://github.com/scq2020/Android-Guide-for-Blind/releases/download/v1.0-demo/demo-video.mp4)**
 

@@ -1,0 +1,19 @@
+# Build files
+build/
+.gradle/
+.cxx/
+*.apk
+*.ap_
+*.dex
+
+# Large binaries
+*.a
+*.so
+
+# Large assets
+app/src/main/assets/ORBvoc.txt
+
+# IDE
+.idea/
+*.iml
+local.properties

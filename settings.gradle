@@ -1,0 +1,5 @@
+include ':app'
+//include ':opencvLibrary'
+include ':opencv'
+include ':libuvccamera'
+include ':usbCameraCommon'

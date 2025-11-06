@@ -1,0 +1,215 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+Camera1.fx: 496.72536
+Camera1.fy: 497.64044
+Camera1.cx: 292.93787
+Camera1.cy: 265.89112
+
+
+Camera1.k1: 0.129652
+Camera1.k2: -0.170880
+Camera1.p1: 0.000825
+Camera1.p2: -0.002223
+Camera1.k3: 0.000000
+
+
+
+# Right Camera calibration and distortion parameters (OpenCV)
+Camera2.fx: 490.35866
+Camera2.fy: 491.01691
+Camera2.cx: 351.55455
+Camera2.cy: 243.09344
+
+# Kannala-Brandt distortion parameters
+Camera2.k1: 0.127282
+Camera2.k2: -0.172846
+Camera2.p1: -0.002135
+Camera2.p2:  -0.002709
+Camera2.k3: 0.000000
+
+# Transformation matrix from right camera to left camera
+Stereo.T_c1_c2: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+  data: [0.9997879677520206, -0.000750224100956253, -0.02057806361359978, -0.05872135050241381,
+    0.0006326229229111804, 0.9999834360080063, -0.005720795212321995, 0.0001915582743423389,
+    0.02058201463716373, 0.005706564064501801, 0.9997718818810898, 0.0014051762571297287,
+    0.0, 0.0, 0.0, 1.0]
+
+
+
+
+# Camera resolution
+Camera.width: 640
+Camera.height: 480
+
+# Camera frames per second 
+Camera.fps: 20
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+# Close/Far threshold. Baseline times.
+Stereo.ThDepth: 35.0
+Stereo.b: 0.060
+
+
+
+IMU.T_b_c1: !!opencv-matrix
+  rows: 4
+  cols: 4
+  dt: f
+  data: [0.999948 , -0.0020486, -0.00999417 ,-0.00580181,
+         -0.00235886 ,  -0.999512  ,-0.0311325  ,-0.0383586,
+         -0.00992552 ,  0.0311545  , -0.999465 , -0.0437231,
+         0       ,    0        ,   0       ,    1]
+
+# IMU noise (Use those from VINS-mono)
+IMU.NoiseGyro: 4.3931413338643845e-04 # 0.004 (VINS) # 0.00016 (TUM) # 0.00016    # rad/s^0.5
+IMU.NoiseAcc: 1.0872018795129655e-02 # 0.04 (VINS) # 0.0028 (TUM) # 0.0028     # m/s^1.5
+IMU.GyroWalk: 1.9357020654214397e-06 # 0.000022 (VINS and TUM) rad/s^1.5
+IMU.AccWalk: 3.2980130751381905e-04 # 0.0004 (VINS) # 0.00086 # 0.00086    # m/s^2.5
+IMU.Frequency: 100.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 20000 # Tested with 1250
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.15
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 10
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 15
+ORBextractor.minThFAST: 7
+
+
+# 建议添加以下参数  
+ThresholdInit: 100                # 初始化阈值  
+TrackingMinFrames: 5              # 最小跟踪帧数  
+LocalMapping.KeyFramesInQueue: 3   # 关键帧队列大小  
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
+
+
+LEFT.width: 640
+LEFT.height: 480
+LEFT.D: !!opencv-matrix
+  rows: 1
+  cols: 5
+  dt: d
+  data: [0.138023, -0.168797, 0.003814, -0.004399, 0.000000]
+LEFT.K: !!opencv-matrix
+  rows: 3
+  cols: 3
+  dt: d
+  data: [500.65596,   0.     , 277.22144,
+         0.     , 501.59611, 223.92584,
+         0.     ,   0.     ,   1.     ]
+LEFT.R:  !!opencv-matrix
+  rows: 3
+  cols: 3
+  dt: d
+  #data: [0.999966347530033, -0.001422739138722922, 0.008079580483432283, 0.001365741834644127, 0.9999741760894847, 0.007055629199258132, -0.008089410156878961, -0.007044357138835809, 0.9999424675829176]
+  data: [ 0.98614826, -0.01527655,  0.16516126,
+          0.01577467,  0.99987412, -0.00170458,
+          -0.16511443,  0.00428633,  0.9862651 ]
+LEFT.P:  !!opencv-matrix
+  rows: 3
+  cols: 4
+  dt: d
+  data: [568.09927,   0.     , 157.4081 ,   0.     ,
+         0.     , 568.09927, 225.8988 ,   0.     ,
+         0.     ,   0.     ,   1.     ,   0.     ]
+
+RIGHT.width: 640
+RIGHT.height: 480
+RIGHT.D: !!opencv-matrix
+  rows: 1
+  cols: 5
+  dt: d
+  data: [0.111012, -0.114543, 0.003679, -0.004878, 0.000000]
+RIGHT.K: !!opencv-matrix
+  rows: 3
+  cols: 3
+  dt: d
+  data: [491.73947,   0.     , 290.45462,
+         0.     , 493.08926, 228.297  ,
+         0.     ,   0.     ,   1.     ]
+RIGHT.R:  !!opencv-matrix
+  rows: 3
+  cols: 3
+  dt: d
+  #data: [0.9999633526194376, -0.003625811871560086, 0.007755443660172947, 0.003680398547259526, 0.9999684752771629, -0.007035845251224894, -0.007729688520722713, 0.007064130529506649, 0.999945173484644]
+  data: [ 0.98571524, -0.01545086,  0.1677103 ,
+          0.01494487,  0.99987916,  0.0042789 ,
+          -0.16775614, -0.00171137,  0.98582704]
+RIGHT.P:  !!opencv-matrix
+  rows: 3
+  cols: 4
+  dt: d
+  data: [568.09927,   0.     , 157.4081 , -34.73697,
+         0.     , 568.09927, 225.8988 ,   0.     ,
+         0.     ,   0.     ,   1.     ,   0.     ]
+
+#System.LoadAtlasFromFile: "new_workspace"
+#System.SaveAtlasToFile: "experiment1"
+#System.SaveAtlasToFile: "workspace"
+#System.SaveAtlasToFile: "new_workspace"  # 建议用新名字
+System.LoadAtlasFromFile: "/storage/emulated/0/Android/data/com.vslam.orbslam3.vslamactivity/files/SLAM/MapData/new_workspace"
+
+RGBD.DepthMapFactor: 1.0
+PointCloudMapping.maxDistance: 3
+PointCloudMapping.stride: 2
+
+PointCloudMapping.voxelFilter: 1
+PointCloudMapping.Resolution: 0.01
+
+PointCloudMapping.statisticalFilter: 1
+PointCloudMapping.meank: 100
+PointCloudMapping.thresh: 0.8
+
+PointCloudMapping.radiusFilter: 1
+PointCloudMapping.radius: 0.1
+PointCloudMapping.radiusNum: 15
+
+#--------------------------------------------------------------------------------------------
+# Grid Map Parameters
+#--------------------------------------------------------------------------------------------
+# 栅格地图配置
+GridMap.scaleFactor: 20.0
+GridMap.cloudMaxX: 10.0
+GridMap.cloudMinX: -10.0
+GridMap.cloudMaxY: 10.0
+GridMap.cloudMinY: -10.0
+GridMap.freeThreshold: 0.65
+GridMap.occupiedThreshold: 0.1
+GridMap.visitThreshold: 100
+GridMap.useLocalCounters: false

@@ -154,40 +154,6 @@ This research provides both theoretical innovations and practical implementation
 - Foundation for advanced features (multi-device collaboration, cloud intelligence)
 - Open-source contribution to assistive technology community
 
-## Publication
-
-This work is published in **IEEE Transactions on Human-Machine Systems**:
-
-**Authors**: Chengqun Song, Baoqin Huang, Yilong Ma, and Jun Cheng* (Senior Member, IEEE)
-
-**Affiliation**: Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences & The Chinese University of Hong Kong
-
-**Funding**: Supported by Yunnan Science & Technology Project, Guangdong Major Project, National Natural Science Foundation of China, and other research programs.
-
-## Citation
-
-If you use this system in your research, please cite:
-
-```bibtex
-@article{song2025android,
-  title={Design and Implementation of Android-based SLAM Intelligent Guide System for the Visually Impaired},
-  author={Song, Chengqun and Huang, Baoqin and Ma, Yilong and Cheng, Jun},
-  journal={IEEE Transactions on Human-Machine Systems},
-  year={2025},
-  publisher={IEEE}
-}
-```
-
-## Contact
-
-**Corresponding Author**: Jun Cheng  
-**Email**: jun.cheng@siat.ac.cn  
-**ORCID**: https://orcid.org/0000-0002-3131-3275
-
-## License
-
-[Specify your license here, e.g., MIT, GPL, Apache 2.0]
-
 ## Acknowledgments
 
 This work was supported by:

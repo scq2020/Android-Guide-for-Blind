@@ -8,14 +8,6 @@ An intelligent indoor navigation system that integrates advanced visual SLAM tec
 
 ### Watch Our System in Action
 
-<div align="center">  
-
-![System Architecture Diagram](./docs/images/fig4.png)  
-
-*Figure 4: Comprehensive system architecture showing the integration of SLAM engine, path planning, map management, and multimodal interaction modules*  
-
-</div>
-
 **[📥 Download Full Video (16.51 MB)](https://github.com/scq2020/Android-Guide-for-Blind/releases/download/v1.0-demo/demo-video.mp4)**
 
 ### Video Highlights (2 minutes)
